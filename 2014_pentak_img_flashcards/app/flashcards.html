@@ -1,0 +1,125 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+  <link rel="StyleSheet" href="../../img_flashcards_lib/css/flashcards.min.css" media="screen" />
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+  <script src="../../img_flashcards_lib/js/jquery.lazyload.min.js" type="text/javascript"></script>
+  <script src="../../img_flashcards_lib/js/lunr.min.js" type="text/javascript"></script>
+  <script src="../../img_flashcards_lib/js/flashcards.min.js" type="text/javascript"></script>
+  <title>Flashcards</title>
+  <script type="text/javascript">
+  $(function() { 
+    CengageFlashcardsApp.initFlashcards({product:"pentak9e",initialChapter:"all"}); 
+  });
+  </script>
+</head>
+<body class="flashcardsbdy">
+  <div data-role="page" data-url="projects/art_flashcards_js/flashcards.html" tabindex="0" class="ui-page ui-page-theme-b ui-page-active">
+    <div role="main" class="ui-content">
+
+      <div class="flashcards">
+        <button class="mobile-menu-btn ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-bars ui-btn-icon-bottom"></button>
+        <div class="titlebar">
+          <div class="menu-chapter">
+            <label for="menu">Choose a Chapter</label>
+            <select title="Select a Chapter" class="menu">
+              <option value="999">ALL CHAPTERS</option>
+              <option value="1">Chapter 1. Design Process</option>
+              <option value="2">Chapter 2. Unity</option>
+              <option value="3">Chapter 3. Emphasis and Focal Point</option>
+              <option value="4">Chapter 4. Scale and Proportion</option>
+              <option value="5">Chapter 5. Balance</option>
+              <option value="6">Chapter 6. Rhythm</option>
+              <option value="7">Chapter 7. Design Elements</option>
+              <option value="8">Chapter 8. Shape</option>
+              <option value="9">Chapter 9. Pattern and Texture</option>
+              <option value="10">Chapter 10. Illusion of Space</option>
+              <option value="11">Chapter 11. Illusion of Motion</option>
+              <option value="12">Chapter 12. Value</option>
+              <option value="13">Chapter 13. Color</option>
+            </select>
+          </div>
+          <div class="menu-btns">
+            <button title="Shuffle Cards" class="menu-btn shuffle ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-fc-shuffle ui-btn-icon-bottom"></button>
+            <button title="Hide Current Card" class="menu-btn remove ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-fc-hide ui-btn-icon-bottom">
+              <div class="hidden-count"></div>
+            </button>
+            <button title="Show All Cards"  class="menu-btn show ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-fc-show ui-btn-icon-bottom"></button>
+
+          </div>
+
+          <div class="search-container">
+            <label for="search-input">Search:</label>
+            <input  title="Search Cards" type="search" name="clear" id="search-input" class="search-input" value="" data-clear-btn="true"></div>
+
+        </div>
+        <!-- end titlebar -->
+        <div class="search-output">
+          <div>
+            <span class="matches-chapter">0</span>
+            In this chapter
+            <br/>
+            <span class="matches-all">0</span>
+            Total in all chapters
+          </div>
+          <div class="currently-viewing-msg">
+            [ currently viewing
+            <span class="currently-viewing-val">all chapters</span>
+            ]
+          </div>
+          <div class="search-output-btn">
+            <button title="Show All Matches"  class="match-btn matches ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline">Show All Matches</button>
+          </div>
+        </div>
+        <div class="main">
+          <div class="watermark">
+            <div class="watermark-txt">
+              <span class="title">DESIGN BASICS</span>
+              <span class="titlesm">5e</span>
+            </div>
+          </div>
+          <div class="content">
+            <div class="image">
+              <img class="img-cover" src="css/images/cover.gif" />
+              <img  class="img0"/>
+              <div class="figure"></div>
+              <div class="card-pos"></div>
+            </div>
+            <div class="review">
+              <div class="review-content">
+                <ul>
+                  <li class='label title'>TITLE<ul><li/></ul></li>
+                  <li class='label year'>YEAR<ul><li/></ul></li>
+                  <li class='label medium'>MEDIUM<ul><li/></ul></li>
+                </ul>
+                <ul>
+                  <li class='label artist'>ARTIST<ul><li/></ul></li>
+                  <li class='label dimensions'>DIMENSIONS<ul><li/></ul></li>
+                  <li class='label description'>DESCRIPTION<ul><li/></ul></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end main -->
+        <div class="prev">
+          <button class="prev-arrow ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-carat-l ui-btn-icon-bottom"></button>
+        </div>
+        <div class="next">
+          <button class="next-arrow ui-btn ui-input-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-carat-r ui-btn-icon-bottom"></button>
+        </div>
+
+        <div class="thumbs"/>
+      </div>
+
+      <div class="no-cards-msg">No cards found.</div>
+      <div class="flip-img-layer">
+        <img src="./css/images/flip.png"/>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
